@@ -2,7 +2,8 @@ WITH raw_reviews AS (
     SELECT
         *
     FROM
-        proj-dbt-airbnb.RAW.RAW_REVIEWS
+        --proj-dbt-airbnb.RAW.RAW_REVIEWS
+        {{source('proj-dbt-airbnb', 'reviews')}}
 )
 SELECT
     listing_id,
